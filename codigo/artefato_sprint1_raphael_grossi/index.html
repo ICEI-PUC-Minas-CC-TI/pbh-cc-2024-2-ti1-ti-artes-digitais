@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyArt - Compra e Doação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="artwork-container">
+        <h2>Ashborn</h2>
+        <img src="Ashborn.png" alt="Abstract Landscape">
+        <p>De: Chu-Gong</p>
+        <p>Valor: 50$</p>
+        
+        <!-- Botão de Compra/Doação -->
+        <button id="buyDonateBtn">Comprar/Doar</button>
+    </div>
+
+    <!-- Modal para Compra/Doação -->
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Escolha a transação</h3>
+            <button id="buyBtn">Comprar</button>
+            <button id="donateBtn">Doar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
