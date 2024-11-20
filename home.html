@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyArt</title>
+    <link rel="stylesheet" href="buyart.css">
+</head>
+<body>
+    <!-- Barra lateral (perfil e ícones) -->
+    <div class="sidebar">
+        <div class="profile-icon">
+            <img src="Rigby.jpg" alt="Ícone do perfil">
+        </div>
+        <button class="add-button">+</button>
+    </div>
+
+
+
+    <!-- Seção da arte -->
+    <main>
+    <!-- Cabeçalho principal -->
+        <h1>BuyArt</h1>
+        <section class="artwork">
+            <h2>Ashborn</h2>
+            <img src="Ashborn.png" alt="Imagem da arte">
+            <p class="artist">De: Chu-Gong</p>
+        </section>
+
+        <!-- Ícones laterais para interações -->
+<div class="icons">
+    <button class="icon-button heart">❤️</button>
+    <button class="icon-button comment">💬</button>
+    <button class="icon-button more" onclick="toggleDescription()">...</button>
+    <button class="icon-button buy" onclick="window.location.href='index.html'">$</button>
+</div>
+
+<!-- Janela do popup -->
+<div id="popup-description" class="popup hidden">
+    <p>A arte 'Ashborn' é inspirada no universo de Solo Leveling, trazendo o personagem principal em sua forma poderosa. Criada por Chu-Gong.</p>
+    <button onclick="toggleDescription()">Fechar</button>
+</div>
+    </main>
+
+</body>
+</html>
