@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyArt</title>
+    <link rel="stylesheet" href="buyart.css">
+</head>
+<body>
+    <!-- Barra lateral (perfil e ícones) -->
+    <div class="sidebar">
+        <div class="profile-icon">
+            <img src="Rigby.jpg" alt="Ícone do perfil">
+        </div>
+        <button class="add-button" aria-label="Adicionar item" role="button">+</button>
+    </div>
+
+    <!-- Seção da arte -->
+    <main>
+        <!-- Cabeçalho principal -->
+        <h1>BuyArt</h1>
+        <section class="artwork">
+            <h2>Ashborn</h2>
+            <img src="Ashborn.png" alt="Imagem da arte">
+            <p class="artist">De: Chu-Gong</p>
+        </section>
+
+        <!-- Ícones laterais para interações -->
+        <div class="icons">
+            <button id="heartBtn" class="icon-button heart" aria-label="Curtir arte">❤️</button>
+            <button id="commentBtn" class="icon-button comment" aria-label="Comentar sobre a arte">💬</button>
+            <button id="moreBtn" class="icon-button more" onclick="toggleDescription()" aria-label="Mais informações">...</button>
+            <button id="buyDonateBtn" class="icon-button buy" aria-label="Comprar ou doar">$</button>
+        </div>
+
+        <!-- Janela do popup -->
+        <div id="popup-description" class="popup hidden">
+            <p>A arte 'Ashborn' é inspirada no universo de Solo Leveling, trazendo o personagem principal em sua forma poderosa. Criada por Chu-Gong.</p>
+            <button onclick="toggleDescription()">Fechar</button>
+        </div>
+
+        <!-- Modal de Transação -->
+        <div id="transactionModal" class="popup hidden">
+            <div class="modal-content">
+                <span class="close" aria-label="Fechar modal">&times;</span>
+                <p>Escolha uma ação:</p>
+                <button id="buyBtn">Comprar</button>
+                <button id="donateBtn">Doar</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="buyart.js"></script>
+</html>
