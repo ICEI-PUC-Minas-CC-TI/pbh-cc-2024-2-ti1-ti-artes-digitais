@@ -13,9 +13,10 @@
             <img src="Rigby.jpg" alt="Ícone do perfil">
         </div>
         <button class="add-button" aria-label="Adicionar item" role="button">+</button>
+        <button id="settingsBtn" class="add-button" aria-label="Configurações" role="button">⚙️</button>
     </div>
 
-    <!-- Seção da arte -->
+    <!-- Seção principal -->
     <main>
         <!-- Cabeçalho principal -->
         <h1>BuyArt</h1>
@@ -33,10 +34,36 @@
             <button id="buyDonateBtn" class="icon-button buy" aria-label="Comprar ou doar">$</button>
         </div>
 
-        <!-- Janela do popup -->
+        <!-- Janela de descrição -->
         <div id="popup-description" class="popup hidden">
             <p>A arte 'Ashborn' é inspirada no universo de Solo Leveling, trazendo o personagem principal em sua forma poderosa. Criada por Chu-Gong.</p>
             <button onclick="toggleDescription()">Fechar</button>
+        </div>
+
+        <!-- Modal de Configurações -->
+        <div id="settingsModal" class="popup hidden">
+            <div class="modal-content">
+                <h2>Configurações</h2>
+                <div class="settings-section">
+                    <h3>Tema</h3>
+                    <label>
+                        <input type="radio" name="theme" value="light" checked> Claro
+                    </label>
+                    <label>
+                        <input type="radio" name="theme" value="dark"> Escuro
+                    </label>
+                </div>
+                <div class="settings-section">
+                    <h3>Notificações</h3>
+                    <label>
+                        <input type="checkbox" id="notifications" checked> Ativar notificações
+                    </label>
+                </div>
+                <div class="settings-actions">
+                    <button id="saveSettingsBtn">Salvar</button>
+                    <button id="cancelSettingsBtn">Cancelar</button>
+                </div>
+            </div>
         </div>
 
         <!-- Modal de Transação -->
@@ -49,6 +76,6 @@
             </div>
         </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
-<script src="buyart.js"></script>
 </html>
