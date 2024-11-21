@@ -1,103 +1,112 @@
+// Referências aos elementos DOM
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsModal = document.getElementById("settingsModal");
+const saveSettingsBtn = document.getElementById("saveSettingsBtn");
+const cancelSettingsBtn = document.getElementById("cancelSettingsBtn");
+
+// Exibir/ocultar modal de configurações
+settingsBtn.addEventListener("click", () => {
+    settingsModal.classList.toggle("hidden");
+    document.body.classList.toggle("popup-active");
+});
+
+cancelSettingsBtn.addEventListener("click", () => {
+    settingsModal.classList.add("hidden");
+    document.body.classList.remove("popup-active");
+});
+
+// Salvar configurações
+saveSettingsBtn.addEventListener("click", () => {
+    const selectedTheme = document.querySelector("input[name='theme']:checked").value;
+    const notificationsEnabled = document.getElementById("notifications").checked;
+
+    alert(`Configurações salvas!\nTema: ${selectedTheme}\nNotificações: ${notificationsEnabled ? "Ativas" : "Desativadas"}`);
+    settingsModal.classList.add("hidden");
+    document.body.classList.remove("popup-active");
+});
 // Dados simulados da arte e usuário
 const artData = {
-  item_id: "ART1001",
-  title: "Abstract Landscape",
-  artist: "creativePainter",
-  price: 50.00,
-  currency: "USD"
-};
-
-const userData = {
-  user_id: "U001",
-  username: "artLover123",
-  email: "artlover123@example.com"
-};
-
-// Elementos DOM
-const modal = document.getElementById("transactionModal");
-const buyDonateBtn = document.getElementById("buyDonateBtn");
-const closeBtn = document.querySelector(".close");
-const buyBtn = document.getElementById("buyBtn");
-const donateBtn = document.getElementById("donateBtn");
-const popupDescription = document.getElementById("popup-description");
-
-// Função para exibir/ocultar descrição da arte
-function toggleDescription() {
-  const body = document.body;
-  if (popupDescription.classList.contains("hidden")) {
-      popupDescription.classList.remove("hidden");
-      body.classList.add("popup-active");
-  } else {
-      popupDescription.classList.add("hidden");
-      body.classList.remove("popup-active");
-  }
-}
-
-// Eventos do modal de transação
-if (buyDonateBtn) {
-  buyDonateBtn.onclick = () => {
-      modal.style.display = "block";
+    item_id: "ART1001",
+    title: "Abstract Landscape",
+    artist: "creativePainter",
+    price: 50.00,
+    currency: "USD"
   };
-}
-
-if (closeBtn) {
-  closeBtn.onclick = () => {
-      modal.style.display = "none";
+  
+  const userData = {
+    user_id: "U001",
+    username: "artLover123",
+    email: "artlover123@example.com"
   };
-}
-
-window.onclick = (event) => {
-  if (event.target === modal) {
-      modal.style.display = "none";
+  
+  // Exibir o modal de transação
+  const modal = document.getElementById("transactionModal");
+  const buyDonateBtn = document.getElementById("buyDonateBtn");
+  const span = document.getElementsByClassName("close")[0];
+  
+  buyDonateBtn.onclick = function() {
+    modal.style.display = "block";
   }
-};
-
-// Lógica de Compra e Doação
-if (buyBtn) {
-  buyBtn.onclick = () => processTransaction("purchase");
-}
-
-if (donateBtn) {
-  donateBtn.onclick = () => processTransaction("donation");
-}
-
-// Processar transação
-function processTransaction(type) {
-  let transaction = {
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  // Lógica de Compra
+  document.getElementById("buyBtn").onclick = function() {
+    processTransaction('purchase');
+  }
+  
+  // Lógica de Doação
+  document.getElementById("donateBtn").onclick = function() {
+    processTransaction('donation');
+  }
+  
+  // Função de processamento de transação
+  function processTransaction(type) {
+    let transaction = {
       transaction_id: "TX004",
       type: type,
       user: userData,
       item: artData,
       payment: {
-          method: type === "purchase" ? "credit_card" : "paypal",
-          status: "completed",
-          date: new Date().toISOString()
+        method: type === 'purchase' ? 'credit_card' : 'paypal',
+        status: 'completed',
+        date: new Date().toISOString()
       }
-  };
-
-  if (type === "donation") {
-      let amount = parseFloat(prompt("Digite o valor da doação:"));
-      if (isNaN(amount) || amount <= 0) {
-          alert("Por favor, insira um valor válido.");
-          return;
-      }
-      let message = prompt("Deixe uma mensagem para o artista:");
+    };
+  
+    if (type === 'donation') {
       transaction.donation = {
-          artist: artData.artist,
-          amount: amount,
-          currency: artData.currency,
-          message: message || ""
+        artist: artData.artist,
+        amount: prompt("Digite o valor da doação:"),
+        currency: artData.currency,
+        message: prompt("Deixe uma mensagem para o artista:")
       };
+    }
+  
+    console.log("Transação realizada: ", JSON.stringify(transaction, null, 2));
+    alert("Transação realizada com sucesso!");
+    modal.style.display = "none";
   }
+  
+   // Função de exibição do popup de descrição
+   function toggleDescription()
+   {
+    const popup = document.getElementById('popup-description');
+    const body = document.body;
 
-  console.log("Transação realizada: ", JSON.stringify(transaction, null, 2));
-  alert("Transação realizada com sucesso!");
-  modal.style.display = "none";
-}
-
-// Fechar descrição com "Esc"
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !popupDescription.classList.contains("hidden")) {
-      toggleDescription();
+    if (popup.classList.contains('hidden')) {
+        popup.classList.remove('hidden');
+        body.classList.add('popup-active');
+    } else {
+        popup.classList.add('hidden');
+        body.classList.remove('popup-active');
+    } 
   }
-});
