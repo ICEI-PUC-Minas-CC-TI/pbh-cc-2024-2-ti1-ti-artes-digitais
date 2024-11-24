@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BuyArt.css">
+    <title>BuyArt</title>
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .comments-section {
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .comments-section input {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .comments-section button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comments-section button:hover {
+            background-color: #0056b3;
+        }
+
+        .comments-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comments-list li {
+            margin-bottom: 8px;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <button class="fix-esquerda" onclick="alert">
+            <img class="postagem" src="post.png" width="50">
+        </button>
+        <div class="BuyArt">BuyArt</div>
+        <div class="fixed">
+            <button class="fix-direita" onclick="alert">
+                <img class="perfil" src="perfil.png" width="50">
+            </button>
+            <button class="fix-direitas" onclick="alert">
+                <img class="config" src="config.png" width="50">
+            </button>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pesquisar arte ou artista..." onkeyup="filterPosts()">
+    </div>
+</header>
+<div class="container">
+
+    <div class="post">
+        <div class="imagem">
+            <img class="imagem" src="Digital1.jpg" width="800">
+        </div>
+        <div class="direita">
+            <div class="interações">
+                <button class="arte" id="artista">Digital Art</button>
+                <button class="artista" id="artista">Artista1</button>
+                <button class="like" onclick="alert">
+                    <img class="imagens" src="like.png" width="80px">
+                </button>
+            </div>
+            <!-- Sistema de comentários -->
+            <div class="comments-section">
+                <ul class="comments-list" id="comments-1"></ul>
+                <input type="text" id="commentInput-1" placeholder="Adicione um comentário...">
+                <button onclick="addComment(1)">Comentar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="imagem">
+            <img class="imagem" src="Game3.jpg" width="800">
+        </div>
+        <div class="direita">
+            <div class="interações">
+                <button class="arte" id="artista">Digital Art</button>
+                <button class="artista" id="artista">Akali</button>
+                <button class="like" onclick="alert">
+                    <img class="imagens" src="like.png" width="80px">
+                </button>
+            </div>
+        
+            <div class="comments-section">
+                <ul class="comments-list" id="comments-2"></ul>
+                <input type="text" id="commentInput-2" placeholder="Adicione um comentário...">
+                <button onclick="addComment(2)">Comentar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="imagem">
+            <img class="imagem" src="Pixel2.webp" width="800">
+        </div>
+        <div class="direita">
+            <div class="interações">
+                <button class="arte" id="artista">Digital Art</button>
+                <button class="artista" id="artista">Kyogre</button>
+                <button class="like" onclick="alert">
+                    <img class="imagens" src="like.png" width="80px">
+                </button>
+            </div>
+ 
+            <div class="comments-section">
+                <ul class="comments-list" id="comments-3"></ul>
+                <input type="text" id="commentInput-3" placeholder="Adicione um comentário...">
+                <button onclick="addComment(3)">Comentar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function addComment(postId) {
+        const input = document.getElementById(`commentInput-${postId}`);
+        const comment = input.value.trim();
+
+        if (comment) {
+            const commentList = document.getElementById(`comments-${postId}`);
+            const newComment = document.createElement('li');
+            newComment.textContent = comment;
+            commentList.appendChild(newComment);
+
+            input.value = '';
+        }
+    }
+
+    function filterPosts() {
+        const searchValue = document.getElementById("searchInput").value.toLowerCase();
+        const posts = document.getElementsByClassName("post");
+
+        for (let i = 0; i < posts.length; i++) {
+            const arte = posts[i].querySelector(".arte").textContent.toLowerCase();
+            const artista = posts[i].querySelector(".artista").textContent.toLowerCase();
+
+            if (arte.includes(searchValue) || artista.includes(searchValue)) {
+                posts[i].style.display = "";
+            } else {
+                posts[i].style.display = "none";
+            }
+        }
+    }
+</script>
+</body>
+</html>
