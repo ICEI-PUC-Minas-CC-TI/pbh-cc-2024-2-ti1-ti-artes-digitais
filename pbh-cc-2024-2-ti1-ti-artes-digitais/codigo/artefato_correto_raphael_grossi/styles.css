@@ -1,0 +1,247 @@
+/* Estilo da arte e do botão */
+.artwork-container {
+  text-align: center;
+  margin: 20px;
+}
+
+button#buyDonateBtn, button#buyBtn, button#donateBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+/* Estilo do modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: 15% auto;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Botão de fechar o modal */
+.close, .close-settings {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Botão para alternar o tema */
+button#toggleThemeBtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+  width: 60px;
+  background-color: #333;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.profile-icon img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Botões da barra lateral */
+.add-button, .settings-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .modal-content {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .sidebar {
+  background-color: #222;
+}
+
+body.dark-mode button {
+  background-color: #555;
+}
+
+/* Ajustes adicionais */
+button#buyDonateBtn:hover, button#toggleThemeBtn:hover, 
+button#buyBtn:hover, button#donateBtn:hover {
+  background-color: #45a049;
+}
+
+.add-button:hover, .settings-button:hover {
+  color: #ccc;
+}
+/* Centralizar o conteúdo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  margin-left: 80px; /* Deixa espaço para a barra lateral */
+  text-align: center;
+}
+
+/* Estilo da arte e do botão */
+.artwork-container {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button#buyDonateBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Ajuste dos botões de interação (❤️ 💬 ...) */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icon-button {
+  background-color: #ddd;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+  width: 60px;
+  background-color: #333;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.profile-icon img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.add-button, .settings-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Ajustar para exibir o conteúdo corretamente no modo escuro */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .sidebar {
+  background-color: #222;
+}
+
+/* Ajuste adicional: Títulos e texto */
+h1, h2, p {
+  margin-bottom: 10px;
+}
+
+/* Estilo do modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do botão de fechar */
+span.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Garantir que o modal apareça no centro */
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Definir cursor para o botão de fechar */
+span.close, span.close-settings {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
