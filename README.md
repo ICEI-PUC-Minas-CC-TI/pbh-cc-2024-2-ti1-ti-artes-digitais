@@ -11,4 +11,4 @@ BuyArt é um projeto visando a divulgação de artistas digitais, claramente sem
 
 ## Professores responsáveis
 
-* Amália Soares Vieria de Vasconcelos 
+* Amália Soares Vieira de Vasconcelos 
