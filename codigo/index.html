@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed de Fotos e Mensagens</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="nomedeperfil"></h1>
+    <div class="profile-container">
+        <div class="profile-button" id="profileButton">
+            <!-- A imagem do perfil será carregada dinamicamente -->
+        </div>
+        <span class="profile-name" id="profileName"></span> <!-- Nome do usuário -->
+        
+
+        <!-- O botão será gerado dinamicamente -->
+        <div id="sendMessageButtonContainer"></div>
+        <div id="color"></div>
+    </div>
+
+    <!-- Novo botão na parte superior direita -->
+    <button class="top-right-button" onclick="openSettings()">PAGINA PRINCIPAL</button>
+
+    <div class="feed" id="feed">
+        <!-- As fotos e comentários serão inseridos dinamicamente aqui -->
+    </div>
+
+    <!-- Bolota para abrir a lista de mensagens -->
+    <div class="message-button" onclick="toggleMessageList()">💬</div>
+
+    <!-- Lista de mensagens -->
+    <div class="message-list" id="messageList">
+        <h4>Conversas</h4>
+        <div id="conversationList"></div>
+        <div class="messages" id="messages"></div>
+        <div class="message-input">
+            <input type="text" id="newMessageInput" placeholder="Escreva uma mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
