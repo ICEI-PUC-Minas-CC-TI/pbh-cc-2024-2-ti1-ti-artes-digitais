@@ -106,11 +106,6 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | Protótipo Interativo       | MarvelApp  | https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&node-type=canvas&t=acsXNjZqIfqHriAk-0 |
 |                             |            |                                                    |
 
- Gerenciamento do Projeto
-
-Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
-
-(images/kanban.png)
 
  Vídeo do Projeto
 
