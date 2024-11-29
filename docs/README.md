@@ -102,14 +102,11 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVKkYSgi4=/ |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo       | MarvelApp  | https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&node-type=canvas&t=acsXNjZqIfqHriAk-0 |
 |                             |            |                                                    |
 
 
  Vídeo do Projeto
-
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
 
 [![Vídeo do projeto](images/video.mp4)](https://youtu.be/QY9w4Jug6VM)
 
