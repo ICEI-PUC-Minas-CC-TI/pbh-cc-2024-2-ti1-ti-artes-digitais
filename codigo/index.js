@@ -1,21 +1,40 @@
 let currentUser = '';
+let user1 = {
+    name: "bruna",
+    normal: true,
+    doacoes: 0,
+    email: "arturf123@gmail.com",
+    senha: "ASD",
+    foto: "/images/fff.jpg",
+    artes: [
+      {
+        arte: "/images/fff.jpg",
+        name: "xzz",
+        curtidas: 1,
+      },
+      {
+        arte: "/images/Anime1.jpg",
+        name: "xzz",
+        curtidas: 1,
+      }
+    ]
+};
 
-// Função para carregar o perfil do usuário
-// let emaillogado='arturf123ss@gmail.com';
+// Função para salvar no localStorage
+function saveUserToLocalStorage(user) {
+    // Obtém a lista de usuários existente no localStorage ou inicializa como um array vazio
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    
+    // Adiciona o novo usuário à lista
+    users.push(user);
+    
+    // Salva a lista atualizada no localStorage
+    localStorage.setItem('users', JSON.stringify(users));
+    
+    console.log('Usuário salvo com sucesso!');
+}
 
-
-//let emaillogado='artur70152@gmail.com';
-// let emailteste='artur70152@gmail.com';
-
-//emeillogado=pessoa visitando perfil
-//let emaillogado='arturf123ss@gmail.com';
-
-//emailteste=perfil sendo visitado
-//let emailteste='artur70152@gmail.com';
-
-//let emaillogado='artur70152@gmail.com';
-//let emailteste='arturf123ss@gmail.com';
-
+saveUserToLocalStorage(user1);
 
 const email = localStorage.getItem("users");
 const users = JSON.parse(email);
@@ -30,80 +49,17 @@ const params = new URLSearchParams(window.location.search);
 
 const email2 = params.get("email");
 
-//let emailteste=users[0].email;
 
-let emailteste=email2;
+let emailteste='arturf123ss@gmail.com';
 
-//let emaillogado='arturf123ss@gmail.com';
-//let emailteste='arturf123ss@gmail.com';
-function loadSendMessageButton() {
-    const container = document.getElementById('sendMessageButtonContainer');
-    if (emaillogado !== emailteste) {
-        const button = document.createElement('button');
-        button.className = 'sendmessagebutton';
-        button.textContent = 'mandar primeira mensagem';
-       // mudarCorDeFundo();
-        button.onclick = () => sendmessagebutton(emailteste);
-        container.appendChild(button);
-    }
-}
-function mudarCorDeFundo2(cor1, cor2) {
-   // console.log("bbbb");
-    // Obtém a cor atual do fundo no formato RGB
-    const backgroundColor = getComputedStyle(document.body).backgroundColor;
 
-    // Converter cores hexadecimais para RGB
-    const hexToRgb = (hex) => {
-        const bigint = parseInt(hex.slice(1), 16);
-        const r = (bigint >> 16) & 255;
-        const g = (bigint >> 8) & 255;
-        const b = bigint & 255;
-        return `rgb(${r}, ${g}, ${b})`;
-    };
 
-    // Converte as cores para RGB
-    const cor1Rgb = hexToRgb(cor1);
-    const cor2Rgb = hexToRgb(cor2);
-
-    // Verifica a cor atual e alterna entre cor1 e cor2
-    if (backgroundColor === cor1Rgb) {
-        document.body.style.backgroundColor = cor2;
-    } else if (backgroundColor === cor2Rgb) {
-        document.body.style.backgroundColor = cor1;
-    } else {
-        // Define uma cor padrão caso o fundo não esteja configurado
-        document.body.style.backgroundColor = cor1;
-    }
-}
-function loadcollor() {
-    const container1 = document.getElementById('color');
- 
-        const button1 = document.createElement('button');
-        button1.className = 'sendmessagebutton2';
-        button1.textContent = 'TEMA';
-       // mudarCorDeFundo();
-       let coratual= '#f0f2f5';
-       let proximacor='#323538';
-      // console.log("aaaa");
-       button1.addEventListener('click', () => {
-        //console.log('Botão clicado! Chamando mudarCorDeFundo.');
-        mudarCorDeFundo2(coratual, proximacor);
-    });
-     
-        container1.appendChild(button1);
-   
-}
 
 
 // Chama a função após carregar a página
-document.addEventListener('DOMContentLoaded', () => {
-    loadSendMessageButton();
-    loadcollor();
-});
 
-function mudarCorDeFundo() {
-    document.body.style.backgroundColor = color;
-}
+
+
 
 function loadProfile(email) {
 
@@ -129,26 +85,9 @@ const nomeemail = document.getElementById('nomedeperfil');
 nomeemail.innerText=email;
 
 }
-function loadUserToLocalStorage(email) {
-fetch(`http://localhost:3000/get-user/${emailteste}`) // Substitua pelo email do usuário
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao carregar dados: ${response.statusText}`);
-    }
-    return response.json();
-})
-.then(userData => {
-    // Salva os dados do usuário no LocalStorage
-    localStorage.setItem('currentUser', JSON.stringify(userData));
-    console.log('Dados do usuário carregados para o LocalStorage:', userData);
-})
-.catch(error => console.error('Erro ao carregar dados para o LocalStorage:', error));
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-const userEmail = emailteste; // Substitua pelo email do usuário desejado
-loadUserToLocalStorage(userEmail);
-});
+
+
 
 function updateLocalStorage(email) {
 /*
@@ -169,58 +108,7 @@ fetch(`http://localhost:3000/get-user/${email}`)
 }
 
 
-function updateProfilePhoto(email) {
-if (emaillogado !== emailteste) {
-       return;
-    } 
-const input = document.createElement('input');
-input.type = 'file';
-input.accept = 'image/*';
 
-input.onchange = function () {
-const file = input.files[0];
-if (file) {
-    const formData = new FormData();
-    formData.append('file', file);
-   // 'arturf123ss@gmail.com'
-    // Envia a nova foto para o backend
-    fetch('http://localhost:3000/upload', {
-        method: 'POST',
-        body: formData,
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro ao fazer upload: ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const novaFoto = data.filePath;
-
-            // Atualiza o campo "foto" no JSON do usuário
-            return fetch('http://localhost:3000/update-profile-photo', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, foto: novaFoto }),
-            });
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro ao atualizar foto de perfil: ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(result => {
-            alert(result.message || "Foto de perfil atualizada com sucesso!");
-            loadProfile(email); // Recarrega o perfil para exibir a nova foto
-        })
-        .catch(error => console.error('Erro ao atualizar foto de perfil:', error));
-}
-};
-
-input.click();
-updateLocalStorage(email);  // Abre o seletor de arquivos
-}
 function loadArtes(email) {
     fetch(`http://localhost:3000/get-artes/${emailteste}`)
         .then(response => response.json())
@@ -255,22 +143,14 @@ arte.curtidas=0;
 }
                 actions.innerHTML = `
 
-<span class="photo-action" onclick="likePhoto(${originalIndex}, '${email}', '${email}')">
 
-👍 Curtir <span id="likes-count-${originalIndex}">${arte.curtidas}</span>
-</span>
 
-<span class="photo-action" onclick="toggleComments(${index})">💬 Comentar</span>
 
-${emaillogado === emailteste ? 
-`<span class="photo-action" onclick="removePhoto(${originalIndex}, '${email}')">💬 Remover</span>` : 
-''}
+
 
 <span class="aa" value='${arte.name}'>nome: ${result}</span>
 
-${emaillogado !== emailteste ? 
-`<button class="aac"' onclick="doarpara('${email}')">$$</span>` : 
-''}
+
 `;
                 
             
@@ -293,10 +173,7 @@ ${emaillogado !== emailteste ?
 
                 const newCommentDiv = document.createElement('div');
                 newCommentDiv.classList.add('new-comment');
-                newCommentDiv.innerHTML = `
-                    <input type="text" id="new-comment-input-${index}" placeholder="Escreva um comentário...">
-                    <button onclick="addComment(${index}, '${email}', '${originalIndex}')">Enviar</button>
-                `;
+                
                 commentsSection.appendChild(newCommentDiv);
 
                 photoContainer.appendChild(img);
@@ -326,295 +203,27 @@ return '';
 }
 
 
-function doarpara(email) {
-    console.log(email);
-const donationValue = prompt("Digite o valor da doação:");
-
-// Valida o valor da doação
-if (!donationValue || isNaN(donationValue) || parseFloat(donationValue) <= 0) {
-alert('Por favor, insira um valor de doação válido.');
-return;
-}
-
-// Envia a requisição para o backend
-fetch(`http://localhost:3000/doar/${email}`, {
-method: 'POST',
-headers: {
-    'Content-Type': 'application/json'
-},
-body: JSON.stringify({ donationValue: parseFloat(donationValue) })
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Erro ao processar a doação.');
-    }
-    return response.json();
-})
-.then(data => {
-    // Exibe a mensagem de sucesso ou erro
-    alert(data.message);
-    console.log('Resposta do servidor:', data);
-})
-.catch(error => {
-    console.error('Erro ao realizar a doação:', error);
-    alert('Erro ao realizar a doação. Tente novamente.');
-});
-}
-function toggleComments(index) {
-    const commentsSection = document.getElementById(`comments-section-${index}`);
-    commentsSection.style.display = commentsSection.style.display === 'none' ? 'block' : 'none';
-   // updateLocalStorage(email); 
-}
-function sendmessagebutton(email) {
-// Obtenha o usuário atual do localStorage
-//const currentUserData = JSON.parse(localStorage.getItem('currentUser'));
-
-// if (!currentUserData) {
-//  alert("Erro: Usuário atual não encontrado no localStorage.");
-//  return;
-// }
-if (emaillogado === emailteste) {
-       return;
-    } 
-const currentUserEmail = emaillogado;
-
-fetch('http://localhost:3000/add-message', {
-method: 'POST',
-headers: {
-    'Content-Type': 'application/json'
-},
-body: JSON.stringify({
-    usuario: emailteste, // Email do destinatário
-    texto: '.', // Conteúdo da mensagem
-    remetente: emaillogado // Email do remetente
-})
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao enviar mensagem: ${response.statusText}`);
-    }
-    return response.json();
-})
-.then(data => {
-    alert("Mensagem enviada com sucesso!");
-    console.log("Resposta do servidor:", data);
-})
-.catch(error => {
-    console.error("Erro ao enviar mensagem:", error);
-    alert("Erro ao enviar mensagem.");
-});
-}
-function removePhoto(index, email) {
-if (!confirm("Você tem certeza de que deseja remover esta arte?")) return;
-
-fetch('http://localhost:3000/remove-arte', {
-method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
-    email: email,
-    arteIndex: index,
-}),
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao remover arte: ${response.statusText}`);
-    }
-    return response.json();
-})
-.then(data => {
-    alert(data.message || "Arte removida com sucesso!");
-    loadArtes(email); // Recarregar as artes após a remoção
-})
-.catch(error => console.error('Erro ao remover arte:', error));
-updateLocalStorage(email); 
-}
-
-function likePhoto(index, email, usuario) {
-fetch('http://localhost:3000/update-curtidas', {
-method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
-    email: email,
-    arteIndex: index,
-    usuario: usuario, // Email do usuário atual
-}),
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao registrar curtida: ${response.statusText}`);
-    }
-    return response.json();
-})
-.then(data => {
-    // Atualiza o número de curtidas na interface
-    const likesCount = document.getElementById(`likes-count-${index}`);
-    likesCount.textContent = data.curtidas;
-})
-.catch(error => {
-    alert(`Erro: ${error.message}`);
-    console.error('Erro ao registrar curtida:', error);
-});
-updateLocalStorage(email); 
-}
 
 
 
 
 
-function toggleMessageList() {
-  //  if (emaillogado !== emailteste) {
-   //    return;
-  //  } 
-    const messageList = document.getElementById("messageList");
-    messageList.style.display = messageList.style.display === "none" ? "block" : "none";
-    loadConversations();
-  //  updateLocalStorage(email); 
-}
-
-function loadConversations() {
-    let email=emaillogado;
- //   if (emaillogado !== emailteste) {
-     //  return;
-  //  } 
-    fetch(`http://localhost:3000/get-messages/${email}`)
-    
-        .then(response => response.json())
-        .then(conversations => {
-            
-            const conversationList = document.getElementById('conversationList');
-            conversationList.innerHTML = '';
-
-            conversations.forEach(convo => {
-               // console.log(convo);
-                const convoDiv = document.createElement('div');
-                convoDiv.classList.add('message-user');
-               
-                convoDiv.innerHTML = `
-                    <img src="http://localhost:3000${convo.foto}" alt="Foto de ${convo.nome}" class="conversation-photo">
-                    <span>${convo.nome || "Usuário Anônimo"}</span>
-                `;
-                
-                convoDiv.onclick = () => {
-                    currentUser = convo.usuario;
-                    
-                    loadMessages(convo.mensagens);
-                };
-                conversationList.appendChild(convoDiv);
-            });
-        })
-        .catch(error => console.error('Erro ao carregar conversas:', error));
-        updateLocalStorage(email); 
-}
-
-function loadMessages(messages) {
- //   if (emaillogado !== emailteste) {
-    //  return;
-   // } 
-    const messagesDiv = document.getElementById('messages');
-    messagesDiv.innerHTML = '';
-
-    messages.forEach(msg => {
-        const msgDiv = document.createElement('div');
-        msgDiv.classList.add('message');
-        msgDiv.textContent = msg;
-        messagesDiv.appendChild(msgDiv);
-    });
- //  updateLocalStorage(email); 
-}
-
-function sendMessage() {
-  //  if (emaillogado !== emailteste) {
-     //  return;
-   // } 
-const input = document.getElementById("newMessageInput");
-const messageText = input.value.trim(); // Texto da mensagem
-
-const currentUserEmail = emaillogado; // Email do remetente
-
-const usuario = currentUser; // Email do destinatário
-
-if (!messageText || !currentUserEmail || !usuario) {
-alert("Erro: Texto da mensagem, remetente ou destinatário estão ausentes.");
-return;
-}
-
-fetch('http://localhost:3000/add-message', {
-method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
-    usuario: usuario,
-    texto: messageText,
-    remetente: currentUserEmail
-})
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao enviar mensagem: ${response.statusText}`);
-    }
-    return response.json();
-})
-.then(data => {
-    console.log("Mensagem enviada:", data);
-    input.value = ''; // Limpa o campo de entrada após o envio
-
-    const messagesDiv = document.getElementById('messages');
-    const msgDiv = document.createElement('div');
-    msgDiv.classList.add('message');
-    msgDiv.textContent = `Você: ${messageText}`;
-    messagesDiv.appendChild(msgDiv);
-    
-    messagesDiv.scrollTop = messagesDiv.scrollHeight; // Rola para a última mensagem
-})
-.catch(error => console.error('Erro ao enviar mensagem:', error));
-}
 
 
-function addComment(index, email,originalIndex) {
-    const input = document.getElementById(`new-comment-input-${index}`);
-    const commentText = input.value.trim();
 
-    if (commentText === '') {
-        alert("O comentário não pode estar vazio!");
-        return;
-    }
 
-    const commentsSection = document.getElementById(`comments-section-${index}`);
-    const commentDiv = document.createElement('div');
-    commentDiv.classList.add('comment');
-    commentDiv.innerHTML = `
-        <span class="comment-user">Você:</span>
-        <span class="comment-text">${commentText}</span>
-    `;
-    commentsSection.insertBefore(commentDiv, commentsSection.lastChild);
 
-    input.value = '';
 
-    fetch(`http://localhost:3000/add-comment`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            email: email,
-            arteIndex: originalIndex,
-            comentario: {
-                usuario: "Você",
-                texto: commentText
-            }
-        })
-    })
-    .then(response => response.json())
-    .then(data => console.log("Comentário adicionado:", data))
-    .catch(error => console.error('Erro ao adicionar comentário:', error));
-    
-    updateLocalStorage(email); 
-    
-}
+
+
+
+
 
 function editProfile() {
+
     let email=emailteste;
     if (emaillogado !== emailteste) {
-       return;
+      // return;
     } 
 const input = document.createElement('input');
 input.type = 'file';
@@ -625,7 +234,7 @@ const file = input.files[0];
 if (file) {
     const formData = new FormData();
     formData.append('file', file);
-
+   
     // Opcional: Salvar no servidor local ou usar Base64 diretamente
     fetch('http://localhost:3000/upload', {
         method: 'POST',
