@@ -1,31 +1,19 @@
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
+cff-version: 1.2.0
+message: "Se você usa o BuyArt em sua pesquisa, por favor cite este projeto."
+title: "BuyArt"
+version: "1.0"
+date-released: 2024-12-14
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
+  - name: Raphael Grossi
+  - name: Miguel Pessoa
+  - name: Gabriel Anderson
+  - name: Artur Fernandes
+    affiliation: CEO
+
+repository-code: "https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git"
 keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
+  - "arte"
+  - "compra"
+  - "plataforma digital"
+  - "e-commerce"
+abstract: "BuyArt é um projeto inovador que facilita a compra e venda de arte por meio de uma plataforma digital eficiente e amigável. Esta é a versão inicial (1.0), lançada em 14 de dezembro de 2024."
