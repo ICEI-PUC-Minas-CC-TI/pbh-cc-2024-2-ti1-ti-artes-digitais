@@ -56,8 +56,11 @@ Artistas, usuários interessados em arte, empresas de jogos, etc.
 * Highlights de pesquisa  
 
 ![alt text](images/image-12.png)
+
 ![alt text](images/image-13.png)
+
 ![alt text](images/image-14.png)
+
 ![alt text](images/image-15.png)
 
 ## Etapa de Definição
@@ -65,7 +68,9 @@ Artistas, usuários interessados em arte, empresas de jogos, etc.
 ### Personas
 
 ![alt text](images/image-7.png)
+
 ![alt text](images/image-9.png)
+
 ![alt text](images/image-10.png)
 
 # Product Design
@@ -109,13 +114,21 @@ Essa fase envolve a definição de uma proposta de valor e a criação de wirefr
 Artefatos relacionados à interface e interação do usuário.
 
 ![alt text](images/home.png)
+
 ![alt text](images/perfil.png)
+
 ![alt text](images/login.png)
+
 ![alt text](images/cadastro.png)
+
 ![alt text](images/comentario.png)
+
 ![alt text](<images/postar arte.png>)
+
 ![alt text](images/descricao.png)
+
 ![alt text](images/contatos+dm.png)
+
 ![alt text](images/chat_privado.png)
 
 ## Protótipo Interativo
@@ -151,80 +164,144 @@ Todos trabalharam construindo seus próprios artefatos e harmonizando para que o
 Esta seção apresenta as funcionalidades da solução.Info
 
 Funcionalidade 1 - Cadastro de Contatos
+
 Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
 
 Estrutura de dados: Contatos
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e escolha a opção Cadastros
+
 Em seguida, escolha a opção Contatos
+
 Tela da funcionalidade:
 
 ![alt text](images/cadastro-1.png)
 
+
 Funcionalidade 2 - Comentários
+
 Permite a inclusão, leitura, alteração e exclusão de comentários para o sistema
+
 Estrutura de dados: Comentários
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no botão comentários
+
 Em seguida, clique no botão enviar
+
 Tela da funcionalidade:
+
 ![alt text](images/image.png)
 
+
 Funcionalidade 3 - Postar Imagens
+
 Permite a inclusão, leitura, alteração e exclusão de imagens para o sistema
+
 Estrutura de dados: Imagens
+
 Instruções de acesso:dd
-Abra o site e efetue o login
+
+Abra o site e efetue o logi
+
 Acesse o menu principal e clique no perfil, depois clique em adicionar arte
+
 Tela da funcionalidade:
+
 ![alt text](images/image-1.png)
 
+
 Funcionalidade 4 - Doação
+
 Perimite doação de valores e escrever uma mensagem para o artista
+
 Estrutura de dados: Doações
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no botão que tem $$ como símbolo
+
 Tela da funcionalidade:
+
 ![alt text](images/image-2.png)
 
+
 Funcionalidade 5 - Curtir
+
 Permite curtir as imagens do sistema
+
 Estrutura de dados: Curtidas
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no perfil, depois clique em curtir
+
 Tela da funcionalidade:
+
 ![alt text](images/image-3.png)
 
+
 Funcionalidade 6 - Pesquisa
+
 Permite a busca de imagens e artistas no sistema
+
 Estrutura de dados: Busca
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no campo de busca
+
 Tela da funcionalidade:
+
 ![alt text](images/image-4.png)
 
+
 Funcionalidade 7 - Perfil
+
 Permite a visualização do perfil do usuário
+
 Estrutura de dados: Perfil
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no perfil localizado no canto superior esquerdo da tela
+
 Tela da funcionalidade:
+
 ![alt text](images/image-5.png)
 
+
 Funcionalidade 8 - Alterar Tema
+
 Permite a alteração do tema do sistema
+
 Estrutura de dados: Tema
+
 Instruções de acesso:dd
+
 Abra o site e efetue o login
+
 Acesse o menu principal e clique no botão Alterar Tema localizado debaixo do perfil
+
 Tela da funcionalidade:
+
 ![alt text](images/image-6.png)
+
 
 # Estruturas de Dados
 
