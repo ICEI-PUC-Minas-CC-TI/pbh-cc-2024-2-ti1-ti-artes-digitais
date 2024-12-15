@@ -179,7 +179,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no perfil, depois clique em adicionar arte
 Tela da funcionalidade:
-(images/image-1.png)
+![alt text](images/image-1.png)
 
 Funcionalidade 4 - Doação
 Perimite doação de valores e escrever uma mensagem para o artista
