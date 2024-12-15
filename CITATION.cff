@@ -1,19 +1,26 @@
-cff-version: 1.2.0
-message: "Se você usa o BuyArt em sua pesquisa, por favor cite este projeto."
-title: "BuyArt"
-version: "1.0"
-date-released: 2024-12-14
+cff-version: 1.0.1
+message: BuyArt, the artistic social media.
+title: BuyArt
 authors:
-  - name: Raphael Grossi
-  - name: Miguel Pessoa
-  - name: Gabriel Anderson
-  - name: Artur Fernandes
-    affiliation: CEO
-
-repository-code: "https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git"
+  - family-names: Grossi Gomes Meireles
+    given-names: Raphael
+  - family-names: Anderson Carvalho da Silva
+    given-names: Gabriel
+  - family-names: Pessoa Lima Ferreira
+    given-names: Miguel
+  - family-names: Fernandes Braga de Menezes
+    given-names: Artur
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amália
 keywords:
-  - "arte"
-  - "compra"
-  - "plataforma digital"
-  - "e-commerce"
-abstract: "BuyArt é um projeto inovador que facilita a compra e venda de arte por meio de uma plataforma digital eficiente e amigável. Esta é a versão inicial (1.0), lançada em 14 de dezembro de 2024."
+  - arte
+  - compra
+  - plataforma digital
+  - e-commerce
+  - rede social
+repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-12-01
