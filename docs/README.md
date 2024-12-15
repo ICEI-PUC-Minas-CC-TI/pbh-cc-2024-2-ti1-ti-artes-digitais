@@ -55,18 +55,18 @@ Artistas, usuários interessados em arte, empresas de jogos, etc.
 * Entrevistas qualitativas  
 * Highlights de pesquisa  
 
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
-![alt text](image-15.png)
+![alt text](images/image-12.png)
+![alt text](images/image-13.png)
+![alt text](images/image-14.png)
+![alt text](images/image-15.png)
 
 ## Etapa de Definição
 
 ### Personas
 
-![alt text](image-7.png)
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](images/image-7.png)
+![alt text](images/image-9.png)
+![alt text](images/image-10.png)
 
 # Product Design
 
@@ -80,11 +80,11 @@ Essa fase envolve a definição de uma proposta de valor e a criação de wirefr
 | Usuário do sistema   | Postar artes e fomentar a comunidade                  | Ser reconhecido e lucrar com isso       |
 | Administrador        | Gerenciar e moderar a rede social BuyArt              | Manter a ordem e harmonia no site       |
 
-![alt text](image-11.png)
+![alt text](images/image-11.png)
 
 ## Proposta de Valor
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 ## Requisitos
 
@@ -102,27 +102,27 @@ Essa fase envolve a definição de uma proposta de valor e a criação de wirefr
 | RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis. | MÉDIA      |
 | RNF-002 | Deve processar requisições do usuário em no máximo 3 segundos. | BAIXA      |
 
-![alt text](requisitos.png)
+![alt text](images/requisitos.png)
 
 # Projeto de Interface
 
 Artefatos relacionados à interface e interação do usuário.
 
-![alt text](home.png)
-![alt text](perfil.png)
-![alt text](login.png)
-![alt text](cadastro.png)
-![alt text](comentario.png)
-![alt text](<postar arte.png>)
-![alt text](descricao.png)
-![alt text](contatos+dm.png)
-![alt text](chat_privado.png)
+![alt text](images/home.png)
+![alt text](images/perfil.png)
+![alt text](images/login.png)
+![alt text](images/cadastro.png)
+![alt text](images/comentario.png)
+![alt text](<images/postar arte.png>)
+![alt text](images/descricao.png)
+![alt text](images/contatos+dm.png)
+![alt text](images/chat_privado.png)
 
 ## Protótipo Interativo
 
 ✅ [Protótipo Interativo](https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&t=9A7MVMKtCaBAggpd-1)
 
-![alt text](user_flow.png)
+![alt text](images/user_flow.png)
 
 # Metodologia
 
@@ -144,7 +144,7 @@ Todos trabalharam construindo seus próprios artefatos e harmonizando para que o
 
 ✅ [Vídeo do Projeto](https://youtu.be/QY9w4Jug6VM)
 
-![alt text](<exemplo video.png>)
+![alt text](<images/exemplo video.png>)
 
 ## Funcionalidades
 
@@ -160,7 +160,7 @@ Acesse o menu principal e escolha a opção Cadastros
 Em seguida, escolha a opção Contatos
 Tela da funcionalidade:
 
-![alt text](cadastro-1.png)
+![alt text](images/cadastro-1.png)
 
 Funcionalidade 2 - Comentários
 Permite a inclusão, leitura, alteração e exclusão de comentários para o sistema
@@ -170,7 +170,7 @@ Abra o site e efetue o login
 Acesse o menu principal e clique no botão comentários
 Em seguida, clique no botão enviar
 Tela da funcionalidade:
-![alt text](image.png)
+![alt text](images/image.png)
 
 Funcionalidade 3 - Postar Imagens
 Permite a inclusão, leitura, alteração e exclusão de imagens para o sistema
@@ -179,7 +179,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no perfil, depois clique em adicionar arte
 Tela da funcionalidade:
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Funcionalidade 4 - Doação
 Perimite doação de valores e escrever uma mensagem para o artista
@@ -188,7 +188,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no botão que tem $$ como símbolo
 Tela da funcionalidade:
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Funcionalidade 5 - Curtir
 Permite curtir as imagens do sistema
@@ -197,7 +197,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no perfil, depois clique em curtir
 Tela da funcionalidade:
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 Funcionalidade 6 - Pesquisa
 Permite a busca de imagens e artistas no sistema
@@ -206,7 +206,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no campo de busca
 Tela da funcionalidade:
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 Funcionalidade 7 - Perfil
 Permite a visualização do perfil do usuário
@@ -215,7 +215,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no perfil localizado no canto superior esquerdo da tela
 Tela da funcionalidade:
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Funcionalidade 8 - Alterar Tema
 Permite a alteração do tema do sistema
@@ -224,7 +224,7 @@ Instruções de acesso:dd
 Abra o site e efetue o login
 Acesse o menu principal e clique no botão Alterar Tema localizado debaixo do perfil
 Tela da funcionalidade:
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 # Estruturas de Dados
 
