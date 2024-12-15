@@ -1,125 +1,239 @@
- Introdução
+# Introdução
 
 Informações básicas do projeto.
 
-* **Projeto:** [BuyArt]
-* **Repositório GitHub:** [https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git]
+* **Projeto:** BuyArt
+* **Repositório GitHub:** [https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git](https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git)
 * **Membros da equipe:**
-
   * [Raphael Grossi](https://github.com/HGonroy)
   * [Miguel Pessoa](https://github.com/MiguelPessoaLF)
-  * [Gabriel Anderson](https://github.com/cicrano)
-  * [Artur Fernandes](https://github.com/cicrano)
+  * [Gabriel Anderson](https://github.com/gonafritas)
+  * [Artur Fernandes](https://github.com/artur70152)
 
 A documentação do projeto é estruturada da seguinte forma:
 
-1. Introdução
-2. Contexto
-3. Product Discovery
-4. Product Design
-5. Metodologia
-6. Solução
+1. Introdução  
+2. Contexto  
+3. Product Discovery  
+4. Product Design  
+5. Metodologia  
+6. Solução  
 7. Referências Bibliográficas
 
 ✅ [Documentação de Design Thinking (MIRO)](files/ti_documentacao.pdf)
 
- Contexto
+# Contexto
 
-Visibilidade da arte na internet, uma vez que artistas e pessoas que gostam de arte não possuem um local adequado na internet para isso.
+Detalhes sobre o espaço de problema, os objetivos do projeto, sua justificativa e público-alvo.
 
- Problema
+## Problema
 
-O problema que o BuyArt busca resolver é a visibilidade dos artistas e a valorização do seu trabalho na internet
+O problema que o BuyArt busca resolver é a visibilidade dos artistas e a valorização do seu trabalho na internet.
 
- Objetivos
+## Objetivos
 
-> O BuyArt consegue unir a comunidade de diferentes maneiras sejam elas usuários das redes sociais, artistas que não conseguem visualização nas redes sociais, assim como entusiastas por arte que querem um trabalho personalizado mas não tem alcance aos artistas uma vez que os mesmo não possuem visibilidade na internet.
+O BuyArt conecta a comunidade de diferentes maneiras, abrangendo:
 
- Justificativa
+- Usuários de redes sociais.
+- Artistas que buscam visibilidade.
+- Entusiastas que procuram trabalhos personalizados e de qualidade.
 
-> Escolhemos fazer este projeto pois sentimos a necessidade de poder ajudar pessoas que tem talento e muita dedicação a poderem exercer sua profissão de artista, por meio do melhor de canal de comunicação que existe, a internet.
+## Justificativa
 
- Público-Alvo
+Escolhemos este projeto pois sentimos a necessidade de ajudar pessoas talentosas a exercerem sua profissão de artista por meio do melhor canal de comunicação que existe: a internet.
 
-> Artistas, usuários interesados em artes, empresas de jogos, etc.
+## Público-Alvo
 
- Product Design
+Artistas, usuários interessados em arte, empresas de jogos, etc.
 
-Nesse momento, vamos transformar os insights e validações obtidos em soluções tangíveis e utilizáveis. Essa fase envolve a definição de uma proposta de valor, detalhando a prioridade de cada ideia e a consequente criação de wireframes, mockups e protótipos de alta fidelidade, que detalham a interface e a experiência do usuário.
+# Product Discovery
 
- Histórias de Usuários
+## Etapa de Entendimento
 
-Com base na análise das personas foram identificadas as seguintes histórias de usuários:
+* Matriz CSD  
+* Mapa de stakeholders  
+* Entrevistas qualitativas  
+* Highlights de pesquisa  
 
-| EU COMO...`Artista` | QUERO/PRECISO ...`desenhar e postar`        | PARA ...`lucrar com isso`               |
-| --------------------- | ------------------------------------------ | -------------------------------------- |
-| Usuário do sistema   | Postas suas próprias artes e fomentar a comunidade |ser reconhecido e lucrar com isso|
-| Administrador         | Gerenciar e moderar a rede social BuyArt | manter a ordem e harmonia no site |
+![alt text](image-12.png)
+![alt text](image-13.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
 
-> Imagine, um jovem de 25 anos que desenha a anos e possui capacidade para trabalhar em qualquer empresa que precise
-de um artista assim como empresa de jogos e etc. Agora com nosso site ele pode se mostrar ao mundo e ser capaz de
-mostrar seu trabalho e ser reconhecido.
+## Etapa de Definição
 
- Proposta para Persona Adalberto Soares
+### Personas
 
-(images/persona1.png)
+![alt text](image-7.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
 
- Requisitos
+# Product Design
 
-(images/requisitos.png)
+Essa fase envolve a definição de uma proposta de valor e a criação de wireframes, mockups e protótipos de alta fidelidade.
 
- Requisitos Funcionais
+## Histórias de Usuários
 
-| ID     | Descrição do Requisito                                   | Prioridade |
-| ------ | ---------------------------------------------------------- | ---------- |
-| RF-001 | Permitir que o usuário acesse a rede social e navegue livremente em sua prórpia conta. | ALTA       |
-| RF-002 | Conseguir mandar mensagens para amigos pela pela plataforma assim como comentar nas artes. | MÉDIA     |
+| EU COMO...`PERSONA`  | QUERO/PRECISO ...`FUNCIONALIDADE`                        | PARA ...`MOTIVO/VALOR`                  |
+|----------------------|--------------------------------------------------------|-----------------------------------------|
+| Artista              | Desenhar e postar                                     | Lucrar com isso                         |
+| Usuário do sistema   | Postar artes e fomentar a comunidade                  | Ser reconhecido e lucrar com isso       |
+| Administrador        | Gerenciar e moderar a rede social BuyArt              | Manter a ordem e harmonia no site       |
 
- Requisitos não Funcionais
+![alt text](image-11.png)
 
-| ID      | Descrição do Requisito                                                              | Prioridade |
-| ------- | ------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA     |
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s | BAIXA      |
+## Proposta de Valor
 
- Projeto de Interface
+![alt text](image-7.png)
 
-Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
+## Requisitos
 
- Protótipo Interativo
+### Requisitos Funcionais
 
-(https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&t=9A7MVMKtCaBAggpd-1)
+| ID     | Descrição do Requisito                                                                 | Prioridade |
+|--------|-----------------------------------------------------------------------------------------|------------|
+| RF-001 | Permitir que o usuário acesse a rede social e navegue livremente em sua própria conta. | ALTA       |
+| RF-002 | Possibilitar o envio de mensagens e comentários sobre as artes.                        | MÉDIA      |
 
- Metodologia
+### Requisitos Não Funcionais
 
-Todos trabalharam construindo seus próprios artefatos e conseguiram harmonizar isso para que o site funcionasse perfeitamente.
+| ID      | Descrição do Requisito                                      | Prioridade |
+|---------|-------------------------------------------------------------|------------|
+| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis. | MÉDIA      |
+| RNF-002 | Deve processar requisições do usuário em no máximo 3 segundos. | BAIXA      |
 
- Ferramentas
+![alt text](requisitos.png)
 
-Relação de ferramentas empregadas pelo grupo durante o projeto.
+# Projeto de Interface
+
+Artefatos relacionados à interface e interação do usuário.
+
+![alt text](home.png)
+![alt text](perfil.png)
+![alt text](login.png)
+![alt text](cadastro.png)
+![alt text](comentario.png)
+![alt text](<postar arte.png>)
+![alt text](descricao.png)
+![alt text](contatos+dm.png)
+![alt text](chat_privado.png)
+
+## Protótipo Interativo
+
+✅ [Protótipo Interativo](https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&t=9A7MVMKtCaBAggpd-1)
+
+![alt text](user_flow.png)
+
+# Metodologia
+
+Todos trabalharam construindo seus próprios artefatos e harmonizando para que o site funcionasse perfeitamente.
+
+## Ferramentas
 
 | Ambiente                    | Plataforma | Link de acesso                                     |
-| --------------------------- | ---------- | -------------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVKkYSgi4=/ |
-| Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git |
-| Protótipo Interativo       | MarvelApp  | https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&node-type=canvas&t=acsXNjZqIfqHriAk-0 |
-|                             |            |                                                    |
+|-----------------------------|------------|--------------------------------------------------|
+| Processo de Design Thinking | Miro       | [https://miro.com/app/board/uXjVL3cAQrQ=/?share_link_id=478612106930](https://miro.com/app/board/uXjVL3cAQrQ=/?share_link_id=478612106930) |
+| Processo de Design Thinking | Miro       | [https://miro.com/app/board/uXjVKmJv9mY=/?share_link_id=822407940850](https://miro.com/app/board/uXjVKmJv9mY=/?share_link_id=822407940850) |
+| Processo de Design Thinking | Miro       | [https://miro.com/app/board/uXjVKkYSgi4=/?share_link_id=870199955885](https://miro.com/app/board/uXjVKkYSgi4=/?share_link_id=870199955885) |
+| Repositório de código       | GitHub     | [https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git](https://github.com/ICEI-PUC-Minas-CC-TI/pbh-cc-2024-2-ti1-ti-artes-digitais.git) |
+| Protótipo Interativo        | Figma      | [https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&node-type=canvas&t=acsXNjZqIfqHriAk-0](https://www.figma.com/design/tIAitWKmroZEe3cb07LlNm/Raphael-Grossi's-team-library?node-id=0-1&node-type=canvas&t=acsXNjZqIfqHriAk-0) |
 
+# Solução Implementada
 
- Vídeo do Projeto
+## Vídeo do Projeto
 
-[![Vídeo do projeto](images/video.mp4)](https://youtu.be/QY9w4Jug6VM)
+✅ [Vídeo do Projeto](https://youtu.be/QY9w4Jug6VM)
 
- Estruturas de Dados
+![alt text](<exemplo video.png>)
 
-Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
+## Funcionalidades
 
- Estrutura de Dados - Login/Cadastro
+Esta seção apresenta as funcionalidades da solução.Info
 
-Login/Cadastro
+Funcionalidade 1 - Cadastro de Contatos
+Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+
+Estrutura de dados: Contatos
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e escolha a opção Cadastros
+Em seguida, escolha a opção Contatos
+Tela da funcionalidade:
+
+![alt text](cadastro-1.png)
+
+Funcionalidade 2 - Comentários
+Permite a inclusão, leitura, alteração e exclusão de comentários para o sistema
+Estrutura de dados: Comentários
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no botão comentários
+Em seguida, clique no botão enviar
+Tela da funcionalidade:
+![alt text](image.png)
+
+Funcionalidade 3 - Postar Imagens
+Permite a inclusão, leitura, alteração e exclusão de imagens para o sistema
+Estrutura de dados: Imagens
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no perfil, depois clique em adicionar arte
+Tela da funcionalidade:
+![alt text](image-1.png)
+
+Funcionalidade 4 - Doação
+Perimite doação de valores e escrever uma mensagem para o artista
+Estrutura de dados: Doações
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no botão que tem $$ como símbolo
+Tela da funcionalidade:
+![alt text](image-2.png)
+
+Funcionalidade 5 - Curtir
+Permite curtir as imagens do sistema
+Estrutura de dados: Curtidas
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no perfil, depois clique em curtir
+Tela da funcionalidade:
+![alt text](image-3.png)
+
+Funcionalidade 6 - Pesquisa
+Permite a busca de imagens e artistas no sistema
+Estrutura de dados: Busca
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no campo de busca
+Tela da funcionalidade:
+![alt text](image-4.png)
+
+Funcionalidade 7 - Perfil
+Permite a visualização do perfil do usuário
+Estrutura de dados: Perfil
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no perfil localizado no canto superior esquerdo da tela
+Tela da funcionalidade:
+![alt text](image-5.png)
+
+Funcionalidade 8 - Alterar Tema
+Permite a alteração do tema do sistema
+Estrutura de dados: Tema
+Instruções de acesso:dd
+Abra o site e efetue o login
+Acesse o menu principal e clique no botão Alterar Tema localizado debaixo do perfil
+Tela da funcionalidade:
+![alt text](image-6.png)
+
+# Estruturas de Dados
+
+Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.
+
+### Estrutura de Dados - Login/Cadastro
 
 ```json
-  {
+{
   "usuarios": [
     {
       "id": 1,
@@ -136,12 +250,17 @@ Login/Cadastro
       "email": "bleach@gmail.com"
     },
     {
+      "id": 3,
       "login": "kenpachi",
       "senha": "katana",
       "nome": "Zaraki",
-      "email": "konpaku@gmail.com",
-      "id": 3
+      "email": "konpaku@gmail.com"
     }
   ]
 }
 ```
+
+# Referências
+
+Pinterest, Instagram, Youtube, TikTok e ArtStation
+
